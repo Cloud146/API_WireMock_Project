@@ -1,0 +1,14 @@
+{
+  "priority": 10,
+  "request": {
+    "method": "ANY",
+    "urlPattern": "/api/.*"
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "error-404-book-not-found.json"
+  }
+}

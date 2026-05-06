@@ -1,0 +1,14 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "url": "/api/books/999"
+  },
+  "response": {
+    "status": 404,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "error-404-book-not-found.json"
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "priority": 4,
+  "request": {
+    "method": "POST",
+    "url": "/api/books",
+    "bodyPatterns": [
+      {
+        "matchesJsonPath": "$.[?(@.title == null)]"
+      }
+    ]
+  },
+  "response": {
+    "status": 400,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "error-400-title-is-missing.json"
+  }
+}

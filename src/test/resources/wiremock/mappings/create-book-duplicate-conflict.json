@@ -1,0 +1,26 @@
+{
+  "priority": 3,
+  "request": {
+    "method": "POST",
+    "url": "/api/books",
+    "bodyPatterns": [
+      {
+        "equalToJson": {
+          "id": 0,
+          "title": "The Fellowship of the Ring",
+          "author": "J.R.R. Tolkien",
+          "year": 1954
+        },
+        "ignoreExtraElements": true,
+        "ignoreArrayOrder": true
+      }
+    ]
+  },
+  "response": {
+    "status": 409,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "error-409-book-already-exists.json"
+  }
+}

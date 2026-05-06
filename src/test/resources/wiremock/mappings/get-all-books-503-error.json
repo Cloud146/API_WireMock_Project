@@ -1,0 +1,14 @@
+{
+  "priority": 1,
+  "request": {
+    "method": "GET",
+    "url": "/api/books/666"
+  },
+  "response": {
+    "status": 503,
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "bodyFileName": "error-503-service-unavailable.json"
+  }
+}

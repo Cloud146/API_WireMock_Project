@@ -1,0 +1,10 @@
+{
+  "priority": 2,
+  "request": {
+    "method": "DELETE",
+    "url": "/api/books/10"
+  },
+  "response": {
+    "status": 204
+  }
+}
