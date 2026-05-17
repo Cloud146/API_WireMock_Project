@@ -56,9 +56,13 @@ jobs:
 
       - name: Install Allure CLI
         run: |
+          # Скачиваем архив
           curl -L -o allure.tgz https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz
+          # Распаковываем
           tar -xzf allure.tgz
-          echo "$PWD/allure-2.27.0/bin" >> $GITHUB_PATH
+          # Создаем символическую ссылку в системную папку (как в твоем оригинальном скрипте)
+          sudo ln -sf "$PWD/allure-2.27.0/bin/allure" /usr/local/bin/allure
+          # Проверяем версию
           allure --version
 
       - name: Generate Allure Report
