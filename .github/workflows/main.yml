@@ -56,8 +56,9 @@ jobs:
 
       - name: Install Allure CLI
         run: |
-          sudo wget https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.deb -O allure.deb
-          sudo dpkg -i allure.deb
+          curl -L -o allure.tgz https://github.com/allure-framework/allure2/releases/download/2.27.0/allure-2.27.0.tgz
+          tar -xzf allure.tgz
+          echo "$PWD/allure-2.27.0/bin" >> $GITHUB_PATH
           allure --version
 
       - name: Generate Allure Report
