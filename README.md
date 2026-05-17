@@ -82,3 +82,7 @@
 После завершения тестов:
 ```bash
 mvn allure:serve
+```
+
+<a href="https://cloud146.github.io/API_WireMock_Project/">Посмотреть отчёт в GitHub Pages</a>
+
